@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+class Smart
+{
+protected:
+    int a;
+    int b;
+public:
+    void setab(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+    void print()
+    {
+        cout<<"a="<<a<<"\nb="<<b<<"\n";
+    }
+};
+class SmartBut:public Smart
+{
+    int sum;
+public:
+    void display()
+    {
+        sum=a*b;
+        cout<<"sum="<<sum<<endl;
+    }
+};
+
+int main()
+{
+    SmartBut p;
+    p.setab(2,3);
+    p.print();
+    p.display();
+    return 0;
+}
